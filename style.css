@@ -1,0 +1,95 @@
+/* Main styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+section {
+  padding: 20px;
+}
+
+.project {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #f4f4f4;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+/* Toggle Button */
+#toggle-theme {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#toggle-theme:hover {
+  background-color: #005f99;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  header, section {
+    padding: 10px;
+  }
+
+  .project {
+    margin: 10px 0;
+  }
+}

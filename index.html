@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jelani Beaugris | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    header {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #00bfff;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      color: #007acc;
+      border-bottom: 2px solid #007acc;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .project {
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    #toggle-theme {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 18px;
+      background-color: #007acc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 999;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s;
+    }
+
+    #toggle-theme:hover {
+      background-color: #005f99;
+    }
+
+    .slider {
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .dark-mode header {
+      background-color: #1a1a1a;
+    }
+
+    .dark-mode .project,
+    .dark-mode section {
+      background-color: #1e1e1e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e2f;
+      color: white;
+    }
+
+    .skills-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-weight: bold;
+    }
+
+    .skills-list span {
+      background-color: #007acc;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      animation: pop 0.6s ease-in-out;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.8); opacity: 0; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button id="toggle-theme">Toggle Dark Mode</button>
+    <h1>Jelani Beaugiris</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a Computer Science major at Rutgers University, passionate about machine learning, research, and building impactful technology. Currently a Research Intern at Georgetown and an RA at Rutgers.</p>
+    <img src="https://via.placeholder.com/400x200" alt="Jelani portrait or campus scene">
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="https://via.placeholder.com/800x300?text=Project+1" alt="Project 1">
+        <img src="https://via.placeholder.com/800x300?text=Project+2" alt="Project 2">
+        <img src="https://via.placeholder.com/800x300?text=Project+3" alt="Project 3">
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>YouTube Gun Policy Classifier</h3>
+      <p>Fine-tuned BERT and LLaMA models to detect stance in YouTube comments. Applied to large-scale datasets for policy analysis.</p>
+      <a href="https://github.com/JelaniB0" target="_blank">GitHub Repo</a>
+      <img src="https://via.placeholder.com/600x300" alt="Project Screenshot">
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span>Python</span>
+      <span>JavaScript</span>
+      <span>HTML/CSS</span>
+      <span>React</span>
+      <span>BERT</span>
+      <span>PyTorch</span>
+      <span>Web Scraping</span>
+      <span>Data Analysis</span>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p><a href="resume.pdf" target="_blank">Download PDF</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:jb2154@scarletmail.rutgers.edu">jb2154@scarletmail.rutgers.edu</a></li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/jelanibeaugris" target="_blank">linkedin.com/in/jelanibeaugris</a></li>
+      <li>GitHub: <a href="https://github.com/JelaniB0" target="_blank">github.com/JelaniB0</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jelani Beaugris</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
