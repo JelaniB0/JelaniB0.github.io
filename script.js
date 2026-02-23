@@ -1,17 +1,25 @@
-// Smooth scroll to anchor links
-const anchors = document.querySelectorAll("a[href^='#']");
-anchors.forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
+// Smooth scroll
+document.querySelectorAll("a[href^='#']").forEach(a => {
+  a.addEventListener("click", e => {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
+    const el = document.querySelector(a.getAttribute("href"));
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   });
 });
 
-// Dark mode toggle functionality
-const toggleBtn = document.getElementById("toggle-theme");
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+// Fade-in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.project-card, .blog-card, .social-card, .stat-box').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.3s';
+  observer.observe(el);
 });

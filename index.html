@@ -3,246 +3,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jelani Beaugris | Portfolio</title>
+  <title>Jelani Beaugris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-      color: #333;
-      transition: background-color 0.4s ease, color 0.4s ease;
-    }
-
-    header {
-      background-color: #1e1e2f;
-      color: white;
-      padding: 30px;
-      text-align: center;
-      position: relative;
-    }
-
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-      text-shadow: 1px 1px 3px #000;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      margin-top: 15px;
-    }
-
-    nav li {
-      margin: 0 15px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #00bfff;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 50px;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 2.5em;
-      color: #007acc;
-      border-bottom: 2px solid #007acc;
-      display: inline-block;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-    }
-
-    .project {
-      margin: 20px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      max-width: 600px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .project img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-
-    #toggle-theme {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 10px 18px;
-      background-color: #007acc;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      z-index: 999;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s;
-    }
-
-    #toggle-theme:hover {
-      background-color: #005f99;
-    }
-
-    .slider {
-      max-width: 800px;
-      margin: 0 auto;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .slides {
-      display: flex;
-      width: 300%;
-      animation: slide 12s infinite;
-    }
-
-    .slides img {
-      width: 100%;
-      object-fit: cover;
-    }
-
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      33% { transform: translateX(-100%); }
-      66% { transform: translateX(-200%); }
-      100% { transform: translateX(0); }
-    }
-
-    .dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-
-    .dark-mode header {
-      background-color: #1a1a1a;
-    }
-
-    .dark-mode .project,
-    .dark-mode section {
-      background-color: #1e1e1e;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1e1e2f;
-      color: white;
-    }
-
-    .skills-list {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-weight: bold;
-    }
-
-    .skills-list span {
-      background-color: #007acc;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
-      animation: pop 0.6s ease-in-out;
-    }
-
-    @keyframes pop {
-      0% { transform: scale(0.8); opacity: 0; }
-      50% { transform: scale(1.1); opacity: 1; }
-      100% { transform: scale(1); }
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <button id="toggle-theme">Toggle Dark Mode</button>
-    <h1>Jelani Beaugiris</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a Computer Science major at Rutgers University, passionate about machine learning, research, and building impactful technology. Currently a Research Intern at Georgetown and an RA at Rutgers.</p>
-    <img src="https://via.placeholder.com/400x200" alt="Jelani portrait or campus scene">
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">JB<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#socials">Socials</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-tag">CS @ Rutgers · Research · ML</div>
+      <h1 class="hero-name">
+        Jelani<br>
+        <span class="accent">Beaugris</span>
+      </h1>
+      <p class="hero-subtitle">
+        Building at the intersection of machine learning and policy research.
+        Research intern at Georgetown, RA at Rutgers.
+      </p>
+      <div class="hero-cta">
+        <a href="#research" class="btn btn-primary">View My Work</a>
+        <a href="#about" class="btn btn-ghost">About Me</a>
+      </div>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="slider">
-      <div class="slides">
-        <img src="https://via.placeholder.com/800x300?text=Project+1" alt="Project 1">
-        <img src="https://via.placeholder.com/800x300?text=Project+2" alt="Project 2">
-        <img src="https://via.placeholder.com/800x300?text=Project+3" alt="Project 3">
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-visual">
+      <div class="about-photo-frame">
+        <!-- REPLACE with your actual photo: <img src="me.jpg" alt="Jelani Beaugris"> -->
+        <div class="about-photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span>ADD YOUR PHOTO HERE</span>
+        </div>
+      </div>
+      <div class="about-corner"></div>
+      <div class="about-stats">
+        <div class="stat-box"><div class="stat-number">2</div><div class="stat-label">Research Roles</div></div>
+        <div class="stat-box"><div class="stat-number">3+</div><div class="stat-label">Projects</div></div>
+        <div class="stat-box"><div class="stat-number">ML</div><div class="stat-label">Focus Area</div></div>
+        <div class="stat-box"><div class="stat-number">NLP</div><div class="stat-label">Specialty</div></div>
       </div>
     </div>
 
-    <div class="project">
-      <h3>YouTube Gun Policy Classifier</h3>
-      <p>Fine-tuned BERT and LLaMA models to detect stance in YouTube comments. Applied to large-scale datasets for policy analysis.</p>
-      <a href="https://github.com/JelaniB0" target="_blank">GitHub Repo</a>
-      <img src="https://via.placeholder.com/600x300" alt="Project Screenshot">
+    <div class="about-text">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Builder.<br>Researcher.<br>Problem Solver.</h2>
+      <p>I'm a <strong>Computer Science major at Rutgers University</strong> with a focus on machine learning and its applications to real-world problems.</p>
+      <p>Currently I'm a <strong>Research Intern at Georgetown</strong> and a <strong>Research Assistant at Rutgers</strong>, working on NLP and large language models applied to policy and social media analysis.</p>
+      <p>Outside of research, I'm always building something — whether it's a classifier, a scraper, or this website.</p>
+      <a href="#research" class="btn btn-primary" style="margin-top: 12px; display: inline-block;">See My Research →</a>
     </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <span>Python</span>
-      <span>JavaScript</span>
-      <span>HTML/CSS</span>
-      <span>React</span>
-      <span>BERT</span>
-      <span>PyTorch</span>
-      <span>Web Scraping</span>
-      <span>Data Analysis</span>
+  <div class="divider"></div>
+
+  <!-- RESEARCH -->
+  <section id="research" style="max-width:1200px; margin:0 auto;">
+    <div class="section-label">Work</div>
+    <h2 class="section-title">Research & Projects</h2>
+    <div class="projects-grid">
+      <a href="https://github.com/JelaniB0" target="_blank" class="project-card">
+        <div class="project-tag">NLP · Policy</div>
+        <div class="project-title">YouTube Gun Policy Classifier</div>
+        <div class="project-desc">Fine-tuned BERT and LLaMA models to detect stance in YouTube comments at scale. Applied to large datasets for gun policy research at Georgetown.</div>
+        <div class="project-footer">
+          <div class="project-chips"><span class="chip">Python</span><span class="chip">BERT</span><span class="chip">LLaMA</span></div>
+          <span class="arrow-link">View</span>
+        </div>
+      </a>
+      <div class="project-card">
+        <div class="project-tag">Add Your Tag</div>
+        <div class="project-title">Your Next Project</div>
+        <div class="project-desc">Describe what you built, the problem it solves, and what you learned.</div>
+        <div class="project-footer">
+          <div class="project-chips"><span class="chip">Python</span><span class="chip">PyTorch</span></div>
+          <span class="arrow-link">View</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-tag">Add Your Tag</div>
+        <div class="project-title">Another Project</div>
+        <div class="project-desc">Replace this with a real project. Link each card to a GitHub repo, a paper, or a blog post.</div>
+        <div class="project-footer">
+          <div class="project-chips"><span class="chip">React</span><span class="chip">Node</span></div>
+          <span class="arrow-link">View</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <p><a href="resume.pdf" target="_blank">Download PDF</a></p>
+  <div class="divider"></div>
+
+  <!-- BLOG -->
+  <section id="blog" style="max-width:1200px; margin:0 auto;">
+    <div class="section-label">Writing</div>
+    <h2 class="section-title">Blog</h2>
+    <div class="blog-grid">
+      <a href="blog/post-1.html" class="blog-card">
+        <div class="blog-img"><span>ADD COVER IMAGE</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">June 2025 · 5 min read</div>
+          <div class="blog-title">Fine-Tuning BERT for Stance Detection: What I Learned</div>
+          <div class="blog-excerpt">A behind-the-scenes look at the challenges of applying transformer models to noisy social media data...</div>
+        </div>
+      </a>
+      <a href="blog/post-2.html" class="blog-card">
+        <div class="blog-img"><span>ADD COVER IMAGE</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Your Date · X min read</div>
+          <div class="blog-title">Your Next Blog Post Title</div>
+          <div class="blog-excerpt">Write a 1-2 sentence teaser that makes someone want to click and read more...</div>
+        </div>
+      </a>
+      <a href="blog/post-3.html" class="blog-card">
+        <div class="blog-img"><span>ADD COVER IMAGE</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Your Date · X min read</div>
+          <div class="blog-title">Another Post Title</div>
+          <div class="blog-excerpt">Even a short reflection on something you figured out is worth writing up...</div>
+        </div>
+      </a>
+    </div>
+    <div class="blog-note">
+      <strong>How to add a blog post:</strong> Create a new file like <code>blog/post-4.html</code>, copy an existing post as a template, fill in your content, then add a new <code>.blog-card</code> block to this grid. Push to GitHub and it's live.
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <ul>
-      <li>Email: <a href="mailto:jb2154@scarletmail.rutgers.edu">jb2154@scarletmail.rutgers.edu</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/jelanibeaugris" target="_blank">linkedin.com/in/jelanibeaugris</a></li>
-      <li>GitHub: <a href="https://github.com/JelaniB0" target="_blank">github.com/JelaniB0</a></li>
-    </ul>
+  <div class="divider"></div>
+
+  <!-- RESUME -->
+  <section id="resume" style="max-width:800px; margin:0 auto;">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Resume</h2>
+    <div class="resume-section">
+      <div class="resume-section-title">Education</div>
+      <div class="resume-entry">
+        <div><div class="resume-role">B.S. Computer Science</div><div class="resume-place">Rutgers University</div></div>
+        <div class="resume-date">Expected 2026</div>
+      </div>
+    </div>
+    <div class="resume-section">
+      <div class="resume-section-title">Experience</div>
+      <div class="resume-entry">
+        <div><div class="resume-role">Research Intern</div><div class="resume-place">Georgetown University</div></div>
+        <div class="resume-date">2024 – Present</div>
+        <ul class="resume-bullets">
+          <li>Fine-tuned BERT and LLaMA models for stance detection in YouTube comments</li>
+          <li>Built data pipelines for large-scale policy research datasets</li>
+        </ul>
+      </div>
+      <div class="resume-entry">
+        <div><div class="resume-role">Research Assistant</div><div class="resume-place">Rutgers University</div></div>
+        <div class="resume-date">2024 – Present</div>
+        <ul class="resume-bullets"><li>Add bullet points about your work here</li></ul>
+      </div>
+    </div>
+    <div class="resume-section">
+      <div class="resume-section-title">Skills</div>
+      <div class="project-chips" style="justify-content: flex-start; gap: 8px;">
+        <span class="chip" style="font-size:0.75rem; padding:6px 14px;">Python</span>
+        <span class="chip" style="font-size:0.75rem; padding:6px 14px;">PyTorch</span>
+        <span class="chip" style="font-size:0.75rem; padding:6px 14px;">BERT / LLMs</span>
+        <span class="chip" style="font-size:0.75rem; padding:6px 14px;">JavaScript</span>
+        <span class="chip" style="font-size:0.75rem; padding:6px 14px;">React</span>
+        <span class="chip" style="font-size:0.75rem; padding:6px 14px;">Web Scraping</span>
+        <span class="chip" style="font-size:0.75rem; padding:6px 14px;">Data Analysis</span>
+        <span class="chip" style="font-size:0.75rem; padding:6px 14px;">HTML/CSS</span>
+      </div>
+    </div>
+    <a href="resume.pdf" target="_blank" class="btn btn-primary resume-download">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Download Full Resume (PDF)
+    </a>
   </section>
 
+  <div class="divider"></div>
+
+  <!-- SOCIALS -->
+  <section id="socials" style="max-width:800px; margin:0 auto;">
+    <div class="section-label">Connect</div>
+    <h2 class="section-title">Find Me Online</h2>
+    <div class="socials-grid">
+      <a href="mailto:jb2154@scarletmail.rutgers.edu" class="social-card">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6" style="fill:none; stroke:var(--blue-light); stroke-width:2"/></svg>
+        </div>
+        <div><div class="social-name">Email</div><div class="social-handle">jb2154@scarletmail</div></div>
+      </a>
+      <a href="https://github.com/JelaniB0" target="_blank" class="social-card">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" style="fill:none; stroke:var(--blue-light); stroke-width:2; stroke-linecap:round"/></svg>
+        </div>
+        <div><div class="social-name">GitHub</div><div class="social-handle">@JelaniB0</div></div>
+      </a>
+      <a href="https://linkedin.com/in/jelanibeaugris" target="_blank" class="social-card">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" style="fill:none;stroke:var(--blue-light);stroke-width:2;stroke-linecap:round"/><circle cx="4" cy="4" r="2" style="fill:none;stroke:var(--blue-light);stroke-width:2"/></svg>
+        </div>
+        <div><div class="social-name">LinkedIn</div><div class="social-handle">jelanibeaugris</div></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Jelani Beaugris</p>
+    <p>© 2025 Jelani Beaugris — Built from scratch</p>
+    <div class="footer-dot"></div>
   </footer>
 
-  <script>
-    const toggleBtn = document.getElementById('toggle-theme');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
