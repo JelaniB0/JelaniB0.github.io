@@ -682,14 +682,72 @@ footer p {
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
+  /* NAV */
   nav { padding: 16px 24px; }
   .nav-links { display: none; }
-  #hero { padding: 0 24px; }
+
+  /* HERO */
+  #hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 24px 60px;
+    gap: 40px;
+  }
+
+  .hero-name {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .hero-image {
+    width: 260px;
+    height: 260px;
+    margin-right: 0;
+    align-self: center;
+  }
+
+  /* ABOUT */
   #about {
     grid-template-columns: 1fr;
     padding: 80px 24px;
     gap: 48px;
   }
+
+  /* SECTIONS */
   section { padding: 80px 24px; }
-  footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+
+  /* PROJECTS & BLOG */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* SOCIALS */
+  .socials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* RESUME */
+  .resume-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-date {
+    text-align: left;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 32px 24px;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
 }
